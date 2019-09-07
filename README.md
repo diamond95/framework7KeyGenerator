@@ -27,8 +27,9 @@ Adventage of using key generator is stopping brute-force attacks on your web app
 ## TODO 
     - [] change key length
     - [] automatic key update after generating 
-
+	- [] ...
 
 ## Creator
+
 Ivan Miljanić
 
