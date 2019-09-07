@@ -1,29 +1,34 @@
-# Framework7 PhoneGap Application 
+## Web Auth Key Generator - Framework7 
 
-> [Framework7](http://www.idangero.us/framework7) is a Mobile UI framework that can be used to build hybrid apps with PhoneGap. This template allows you to get started using Framework7 
-  quickly. 
-  
-  For a more extensive Framework7 sample, see the [one included in their Github project](https://github.com/nolimits4web/Framework7/tree/master/dist)
-  or the [demo apps on their website](http://www.idangero.us/framework7/apps/#.VpQCc5MrKjQ).
-    
-  Also, for an intro to Framework7, check out [this post on the PhoneGap blog](http://phonegap.com/blog/2015/11/30/framework7/).   
+Simple cordova / framework7 application that generates 5-digit code and updates it to a web server using HTTP POST Request.
+After update, the administrator types this code in the web application on login site.
 
+Adventage of using key generator is stopping brute-force attacks on your web application.
 
-## Usage
-    
-### PhoneGap CLI
-
-    $ phonegap create my-app --template phonegap-template-framework7
-
-### Cordova CLI
-
-    $ cordova create my-app --template phonegap-template-framework7
-    
-### Desktop
-
-In your browser, open the file:
-
-    /www/index.html
+![Screenshot](https://raw.githubusercontent.com/diamond95/framework7KeyGenerator/master/1.jpg)
 
 
-  
+
+
+## PHP - HTTP Request
+
+
+```php
+    <?php
+
+	if(isset($_POST['code']) && $_POST['code'] != 0 && $_POST['code'] != "") {
+		// save to database
+		echo "success";
+	} else {
+		echo "error";
+	}
+
+```
+## TODO 
+    - [] change key length
+    - [] automatic key update after generating 
+
+
+## Creator
+Ivan Miljanić
+
